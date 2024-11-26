@@ -15,11 +15,11 @@ console.log(property)
 // Example with custom value template:
 const customProperty = someutils.createProperty(
   {
-    width: 'width',
-    height: 'height',
-    size: ['height', 'width']
+    bg: 'backgroundColor',
+    text: 'color',
+    'shadow-c': '--shadow-color'
   },
-  'calc({0} * var(--{1}-scale, {0}))'
+  'rgb({0} / var(--{1}-opacity, 1))'
 )
 
 console.log(customProperty)

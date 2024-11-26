@@ -1,24 +1,26 @@
-type CSSProperties = {
-  [property: string]: string | number
-}
-type InputClasses = {
-  [className: string]: CSSProperties
-}
-type OutputProperties = {
-  [property: string]: {
-    [className: string]: string | number
+import type { Classes, CSSPropertyOrVariable } from '@tenoxui/core'
+
+export type InputClasses = {
+  [className: string]: {
+    [property in CSSPropertyOrVariable]?: string
   }
 }
 
-export function transformClasses(input: InputClasses): OutputProperties {
-  const output: OutputProperties = {}
-  Object.keys(input).forEach((className) => {
+export function transformClasses(input: InputClasses): Classes {
+  const output: Classes = {}
+
+  Object.keys(input).forEach(className => {
     Object.entries(input[className]).forEach(([property, value]) => {
-      if (!output[property]) {
-        output[property] = {}
+      const typedProperty = property as CSSPropertyOrVariable
+      if (!output[typedProperty]) {
+        output[typedProperty] = {}
       }
-      output[property][className] = value
+
+      if (value !== undefined && output[typedProperty]) {
+        output[typedProperty]![className] = value
+      }
     })
   })
+
   return output
 }

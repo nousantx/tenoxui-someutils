@@ -172,6 +172,11 @@
   resolved "https://registry.yarnpkg.com/@rollup/rollup-win32-x64-msvc/-/rollup-win32-x64-msvc-4.24.0.tgz#0574d7e87b44ee8511d08cc7f914bcb802b70818"
   integrity sha512-fbMkAF7fufku0N2dE5TBXcNlg0pt0cJue4xBRE2Qc5Vqikxr4VCgKj/ht6SMdFcOacVA9rqF70APJ8RN/4vMJw==
 
+"@tenoxui/core@1.3.0-alpha.4":
+  version "1.3.0-alpha.4"
+  resolved "https://registry.yarnpkg.com/@tenoxui/core/-/core-1.3.0-alpha.4.tgz#bfd8f78c4564c4cacd0530c6f39efaef64568d3e"
+  integrity sha512-H82xEhzOujHfX4d1jPIXRBTM0PyIfMTtxpHPwSAxOdOt4EXyULO8JwB5SG6rXR4/haTQIQDNCbqgZ2zHzcEG2Q==
+
 "@types/estree@*", "@types/estree@1.0.6", "@types/estree@^1.0.0":
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-1.0.6.tgz#628effeeae2064a1b4e79f78e81d87b7e5fc7b50"

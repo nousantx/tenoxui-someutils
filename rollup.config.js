@@ -14,7 +14,6 @@ const banner = `/*!
  * NOuSantx do that? ¯\\_(ツ)_/¯
  */`
 
-
 const config = {
   input: 'src/index.ts',
   output: [
@@ -23,15 +22,14 @@ const config = {
       format: 'cjs',
       exports: 'named',
 
-      banner,
-      
+      banner
     },
     {
       file: 'dist/index.min.cjs',
       format: 'cjs',
       exports: 'named',
       banner,
-      
+
       plugins: [terser()]
     },
     {
@@ -39,7 +37,7 @@ const config = {
       format: 'umd',
       name,
       banner,
-      
+
       exports: 'named'
     },
     {
@@ -47,21 +45,20 @@ const config = {
       format: 'umd',
       name,
       banner,
-      
+
       exports: 'named',
       plugins: [terser()]
     },
     {
       file: 'dist/index.esm.js',
       format: 'es',
-      banner,
-      
+      banner
     },
     {
       file: 'dist/index.esm.min.js',
       format: 'es',
       banner,
-      
+
       plugins: [terser()]
     }
   ],
