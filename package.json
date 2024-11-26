@@ -6,7 +6,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nousantx/someutils.git"
+    "url": "git+https://github.com/nousantx/tenoxui-someutils.git"
   },
   "type": "module",
   "types": "./dist/index.d.ts",

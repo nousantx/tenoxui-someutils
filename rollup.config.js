@@ -8,10 +8,12 @@ import path from 'node:path'
 const packageJson = JSON.parse(fs.readFileSync(path.resolve('package.json'), 'utf-8'))
 
 const name = 'someutils'
-const banner = `/*!
- * ${packageJson.name} v${packageJson.version} | Licensed under the table.
+const banner =  `/*!
+ * ${packageJson.name} v${packageJson.version} | ${packageJson.license} License
  *
- * NOuSantx do that? ¯\\_(ツ)_/¯
+ * Copyright (c) 2024-present NOuSantx <nousantx@gmail.com>
+ *
+ * Built Date: ${new Date().toString()}
  */`
 
 const config = {
