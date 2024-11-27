@@ -9,10 +9,10 @@ export function toChildString(styles: CSSObject, parentSelectors: string[] = [])
   for (const [key, value] of Object.entries(styles)) {
     const currentSelectors = [...parentSelectors]
 
-    if (key.startsWith('.') || key.startsWith('#')) {
-      currentSelectors.push(key)
-    } else if (parentSelectors.length > 0) {
+    if (parentSelectors.length > 0) {
       currentSelectors[currentSelectors.length - 1] += ` ${key}`
+    } else {
+      currentSelectors.push(key)
     }
 
     if (typeof value === 'string') {

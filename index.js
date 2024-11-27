@@ -1,25 +1,18 @@
-import someutils from './dist/index.esm.js'
+import { toChildString } from './dist/index.esm.js'
 
-const display = someutils.createValue(['flex', 'block', 'inline-flex'])
+// Example usage
+const styles = {
+  body: 'bg-red',
+  '.my-class': 'bg-red',
+  '#about': 'bg-yellow',
+  '#home': 'w-mx-200px',
+  '#home': {
+    '.title': 'text-blue',
+    '.section': {
+      '': 'bg-blue',
+      'div.box': 'style'
+    }
+  }
+}
 
-console.log(display)
-
-const property = someutils.createProperty({
-  bg: 'background',
-  text: 'color',
-  'shadow-c': '--shadow-color'
-})
-
-console.log(property)
-
-// Example with custom value template:
-const customProperty = someutils.createProperty(
-  {
-    bg: 'backgroundColor',
-    text: 'color',
-    'shadow-c': '--shadow-color'
-  },
-  'rgb({0} / var(--{1}-opacity, 1))'
-)
-
-console.log(customProperty)
+console.log(toChildString(styles))
