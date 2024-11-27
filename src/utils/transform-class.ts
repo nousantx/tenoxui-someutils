@@ -9,7 +9,7 @@ export type InputClasses = {
 export function transformClasses(input: InputClasses): Classes {
   const output: Classes = {}
 
-  Object.keys(input).forEach(className => {
+  Object.keys(input).forEach((className) => {
     Object.entries(input[className]).forEach(([property, value]) => {
       const typedProperty = property as CSSPropertyOrVariable
       if (!output[typedProperty]) {
