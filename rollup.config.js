@@ -7,7 +7,7 @@ import path from 'node:path'
 
 const packageJson = JSON.parse(fs.readFileSync(path.resolve('package.json'), 'utf-8'))
 
-const name = 'someutils'
+const name = '__nsx_someutils'
 const banner = `/*!
  * ${packageJson.name} v${packageJson.version} | ${packageJson.license} License
  *

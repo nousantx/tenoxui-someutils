@@ -1,8 +1,21 @@
+export function createValue<T extends string, U extends Record<string, string>>(
+  keys: T[],
+  values: U
+): Record<T, U> {
+  return keys.reduce(
+    (acc, key) => {
+      acc[key] = values
+      return acc
+    },
+    {} as Record<T, U>
+  )
+}
+
 type SameValueObject<T extends string> = {
   [K in T]: K
 }
 
-export function createValue<T extends string>(values: T[]): SameValueObject<T> {
+export function createSameValue<T extends string>(values: T[]): SameValueObject<T> {
   return values.reduce((acc, value) => {
     acc[value] = value
     return acc
