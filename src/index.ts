@@ -1,7 +1,7 @@
 import { merge } from './utils/merge'
 import { transformClasses } from './utils/transform-class'
 import { createValue, createSameValue, createProperty } from './utils/create-value'
-import { toChildString } from './utils/create-template'
+import { toChildString, fromChildString } from './utils/create-template'
 
 const someutils = {
   merge,
@@ -9,8 +9,17 @@ const someutils = {
   createValue,
   createSameValue,
   createProperty,
-  toChildString
+  toChildString,
+  fromChildString
 }
 
-export { merge, transformClasses, createValue, createSameValue, createProperty, toChildString }
+export {
+  merge,
+  transformClasses,
+  createValue,
+  createSameValue,
+  createProperty,
+  toChildString,
+  fromChildString
+}
 export default someutils

@@ -24,3 +24,21 @@ export function toChildString(styles: CSSObject, parentSelectors: string[] = [])
 
   return result
 }
+
+export function fromChildString(inputString: CSSValue): CSSObject {
+  const result: CSSObject = {}
+  const regex = /\((.*?)\):\s*([^;]+);/g
+  //const matches = [...inputString.matchAll(regex)]
+
+  let match: RegExpExecArray | null
+
+  while ((match = regex.exec(inputString))) {
+    const [, key, value] = match
+
+    result[key] = value
+  }
+
+  //matches.forEach(match => {
+  //})
+  return result
+}
