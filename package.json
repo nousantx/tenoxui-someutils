@@ -1,6 +1,6 @@
 {
   "name": "@nousantx/someutils",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "Some utils, literally.",
   "author": "NOuSantx <nousantx@gmail.com>",
   "license": "MIT",
@@ -10,9 +10,9 @@
   },
   "type": "module",
   "types": "./dist/index.d.ts",
-  "main": "./dist/index.min.cjs",
-  "module": "./dist/index.esm.min.js",
-  "browser": "./dist/index.umd.min.js",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.esm.js",
+  "browser": "./dist/index.umd.js",
   "files": [
     "dist/*",
     "LICENSE",
