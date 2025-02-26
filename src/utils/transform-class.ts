@@ -1,4 +1,4 @@
-import type { Classes, CSSPropertyOrVariable } from '@tenoxui/core'
+import type { Classes, CSSPropertyOrVariable } from '@tenoxui/types'
 
 export type InputClasses = {
   [className: string]: {
