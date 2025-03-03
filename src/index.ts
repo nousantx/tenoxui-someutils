@@ -2,6 +2,7 @@ import { merge } from './utils/merge'
 import { transformClasses } from './utils/transform-class'
 import { createValue, createSameValue, createProperty } from './utils/create-value'
 import { toChildString, fromChildString } from './utils/create-template'
+import { is } from './utils/match-value'
 
 const someutils = {
   merge,
@@ -10,7 +11,8 @@ const someutils = {
   createSameValue,
   createProperty,
   toChildString,
-  fromChildString
+  fromChildString,
+  is
 }
 
 export {
@@ -20,6 +22,7 @@ export {
   createSameValue,
   createProperty,
   toChildString,
-  fromChildString
+  fromChildString,
+  is
 }
 export default someutils
